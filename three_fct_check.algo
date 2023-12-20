@@ -32,3 +32,4 @@ BEGIN //body's algorithm
     write ("The length of the sentence:", lgth_sent);
     write ("The number of words in the sentence:", wrd_sent);
     write ("The number of vowels in the sentence:", vowel_sent);
+END
