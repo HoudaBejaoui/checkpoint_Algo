@@ -1,0 +1,34 @@
+ALGORITHM checkpointAlgo //algorithm'name
+
+VAR //variable declaration
+    lgth_sent: INTEGER;
+    wrd_sent: INTEGER:=1;
+    vowel_sent:INTEGER:=0;
+    i: INTEGER:=0;
+    sentence: STRING;
+
+BEGIN //body's algorithm
+
+                                //check that the last character must be a point.
+    REPEAT
+        write ("Please write your sentence (the last character must be a point.):");
+        READ(sentence);
+        lgth_sent := sentence.length;
+    UNTIL (sentence[lgth_sent-1]='.')
+
+
+    FOR i FROM 0 TO (lgth_sent-1) DO
+                                //calculat the number of words in the sentence
+        IF (sentence[i]=' ') THEN
+            wrd_sent := wrd_sent + 1;
+        END_IF
+                                //calculat the number of vowels in the sentence.
+        IF (sentence[i]="a" OR "A" OR "e" OR "E" OR "i" OR "I" OR "o" OR "O" OR "u" OR "U" OR "y" OR "Y") THEN
+            vowel_sent := vowel_sent + 1;
+        END_IF
+        
+    END_FOR
+        
+    write ("The length of the sentence:", lgth_sent);
+    write ("The number of words in the sentence:", wrd_sent);
+    write ("The number of vowels in the sentence:", vowel_sent);
